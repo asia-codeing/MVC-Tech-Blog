@@ -145,10 +145,32 @@ input{
     color: var(--yellwoRed);
 }
 
-@media screen and (min-width: 700) {
+@media screen and (max-width: 770px) {
     .header {
         /* display: block; */
     }
+    .title {
+        font-size: 38px;
+    }
+    .nav {
+        margin-top: 20px;
+        font-size: 21px;
+    }
+    main {
+        width: 90%;
+    }
+    .card {
+        width: 94%;
+    }
+    .newPostBtn{
+        width: 94%;
+    }
+}
+
+/* @media screen and (max-width: 698px) {
+    .header {
+        /* display: block; */
+    /* }
     .title {
         font-size: 38px;
     }
@@ -159,4 +181,10 @@ input{
     main {
         width: 90%;
     }
-}
+    .card {
+        width: 94%;
+    }
+    .newPostBtn{
+        width: 94%;
+    }
+} */ 
