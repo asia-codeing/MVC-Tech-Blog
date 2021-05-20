@@ -4,7 +4,6 @@ const sequelize = require('../../config/connection');
 const withAuth = require('../../utils/auth');
 
 router.get('/', (req, res) => {
-    console.log('======================');
     Post.findAll({
             attributes: ['id',
                 'title',
@@ -28,7 +27,7 @@ router.get('/', (req, res) => {
                 }
             ]
         })
-        .then(dbPostData => res.json(dbPostData.reverse()))
+        .then(postData => res.json(postData.reverse()))
         .catch(err => {
             console.log(err);
             res.status(500).json(err);
@@ -59,12 +58,12 @@ router.get('/:id', (req, res) => {
                 }
             ]
         })
-        .then(dbPostData => {
-            if (!dbPostData) {
+        .then(postData => {
+            if (!postData) {
                 res.status(404).json({ message: 'No post found with this id' });
                 return;
             }
-            res.json(dbPostData);
+            res.json(postData);
         })
         .catch(err => {
             console.log(err);
@@ -78,7 +77,7 @@ router.post('/', withAuth, (req, res) => {
             content: req.body.content,
             user_id: req.session.user_id
         })
-        .then(dbPostData => res.json(dbPostData))
+        .then(postData => res.json(postData))
         .catch(err => {
             console.log(err);
             res.status(500).json(err);
@@ -93,12 +92,12 @@ router.put('/:id', withAuth, (req, res) => {
             where: {
                 id: req.params.id
             }
-        }).then(dbPostData => {
-            if (!dbPostData) {
+        }).then(postData => {
+            if (!postData) {
                 res.status(404).json({ message: 'No post found with this id' });
                 return;
             }
-            res.json(dbPostData);
+            res.json(postData);
         })
         .catch(err => {
             console.log(err);
@@ -110,12 +109,12 @@ router.delete('/:id', withAuth, (req, res) => {
         where: {
             id: req.params.id
         }
-    }).then(dbPostData => {
-        if (!dbPostData) {
+    }).then(postData => {
+        if (!postData) {
             res.status(404).json({ message: 'No post found with this id' });
             return;
         }
-        res.json(dbPostData);
+        res.json(postData);
     }).catch(err => {
         console.log(err);
         res.status(500).json(err);
