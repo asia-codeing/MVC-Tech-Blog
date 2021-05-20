@@ -146,14 +146,13 @@ input{
 }
 
 @media screen and (max-width: 770px) {
-    .header {
-        /* display: block; */
-    }
+    
     .title {
-        font-size: 38px;
+        font-size: 40px;
+        margin: 10px 26px;
     }
     .nav {
-        margin-top: 20px;
+        margin: 22px;
         font-size: 21px;
     }
     main {
@@ -167,24 +166,51 @@ input{
     }
 }
 
-/* @media screen and (max-width: 698px) {
+  @media screen and (max-width: 698px) {
     .header {
-        /* display: block; */
-    /* }
-    .title {
+        display: block;
+     }
+    .title { 
         font-size: 38px;
+        text-align: center;
     }
     .nav {
-        margin-top: 17px;
-        font-size: 21px;
+        margin-top: 20px;
+        text-align: center;
     }
     main {
         width: 90%;
     }
     .card {
-        width: 94%;
+        width: 92%;
     }
     .newPostBtn{
-        width: 94%;
+        width: 92%;
     }
-} */ 
+}
+
+@media screen and (max-width: 324px) {
+    .header {
+        display: block;
+     }
+    .title { 
+        font-size: 34px;
+        text-align: center;
+    }
+    .nav {
+        margin-top: 20px;
+        text-align: center;
+        font-size: 16px;
+
+    }
+    main {
+        width: 98%;
+    }
+    .card {
+        width: 87%;
+    }
+    .newPostBtn{
+        width: 87%;
+    }
+}
+
