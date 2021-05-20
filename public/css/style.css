@@ -201,7 +201,6 @@ input{
         margin-top: 20px;
         text-align: center;
         font-size: 16px;
-
     }
     main {
         width: 98%;
@@ -211,6 +210,37 @@ input{
     }
     .newPostBtn{
         width: 87%;
+    }
+    .card-header-log, 
+    .card-header-new,
+    .card-header-edit,
+    .card-header-comment {
+    font-size: 23px;
+    }
+    .card-body-log, 
+    .card-body-new,
+    .card-body-edit,
+    .card-body-comment{
+    font-size: 23px;
+    }
+}
+
+@media screen and (max-width: 282px) {
+    .title { 
+        font-size: 32px;
+        text-align: center;
+    }
+    .card-header-log, 
+    .card-header-new,
+    .card-header-edit,
+    .card-header-comment {
+    font-size: 21px;
+    }
+    .card-body-log, 
+    .card-body-new,
+    .card-body-edit,
+    .card-body-comment{
+    font-size: 21px;
     }
 }
 
