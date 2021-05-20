@@ -230,6 +230,10 @@ input{
         font-size: 32px;
         text-align: center;
     }
+    .nav {
+        
+        font-size: 14px;
+    }
     .card-header-log, 
     .card-header-new,
     .card-header-edit,
