@@ -189,6 +189,21 @@ input{
     }
 }
 
+@media screen and (max-width: 587px){
+    .card-header {
+        display: block;
+        text-align: center;
+    }
+    .post-name{
+        margin: 0px;
+    }
+    .date{
+        font-size: 17px;
+        margin-right: 10px;
+    }
+
+}
+
 @media screen and (max-width: 324px) {
     .header {
         display: block;
