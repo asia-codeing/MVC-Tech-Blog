@@ -40,7 +40,8 @@ Install the reqiuered packages:
   * Also you have the ability to Update/ Delete a post, by clicking on the post then you will get a form to update or delete a post. 
 
 ## Screenshots: 
-![Demo]()
+![Demo](./assets/demo.gif)
+![Demo2](./assets/demo2.gif)
 
 ## Link-to-deployed-application
 [Tech-Blog](https://mvc--tech--blog.herokuapp.com/)
