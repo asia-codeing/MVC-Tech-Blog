@@ -43,7 +43,7 @@ Install the reqiuered packages:
 ![Demo]()
 
 ## Link-to-deployed-application
-[Tech-Blog]()
+[Tech-Blog](https://mvc--tech--blog.herokuapp.com/)
 
 
 ## Technologies
