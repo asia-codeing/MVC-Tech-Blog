@@ -8,9 +8,9 @@ const helpers = require('./utils/helpers');
 const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
-const hbs = exphbs.create({ helpers });
 const app = express();
 const PORT = process.env.PORT || 3001;
+const hbs = exphbs.create({ helpers });
 
 const sess = {
     secret: 'Super secret secret',
@@ -30,13 +30,9 @@ app.set('view engine', 'handlebars');
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
+
 app.use(routes);
 
 sequelize.sync({ force:false }).then(() => {
     app.listen(PORT, () => console.log(`NOW LISTENING ON ${PORT}`));
-});
-
-
-
-
-
+}).catch((err) => console.log(err, process.env.CLEARDB_DATABASE_URL));
